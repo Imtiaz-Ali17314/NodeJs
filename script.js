@@ -1,4 +1,5 @@
-const info = require("./class");
-const { fatherName } = require("./class/5th");
+import { sum, mul, PI } from "./math.js";
 
-console.log(info[2].name, fatherName);
+console.log(sum(2, 4));
+console.log(mul(2, 9));
+console.log(PI);
