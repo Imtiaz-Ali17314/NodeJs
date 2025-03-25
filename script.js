@@ -1,6 +1,11 @@
-const math = require("./math.js");
+// let n = 5;
 
-console.log(math.sum(5, 6));
-console.log(math.mul(5, 6));
+// for (i = 0; i < n; i++) {
+//   console.log(i + " hello");
+// }
 
-console.log(math.PI);
+let args = process.argv;
+
+for (i = 2; i < args.length; i++) {
+  console.log("hello to " + args[i]);
+}
