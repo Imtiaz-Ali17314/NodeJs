@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
 
-app.listen(3000, () => {
-  console.log(`server is listening at port 3000`);
+const port = 8080;
+
+app.listen(port, () => {
+  console.log(`server is listening at ${port}`);
 });
 
 app.use((req, res) => {
   console.log("request received");
+  res.send("This is a basic response");
 });
