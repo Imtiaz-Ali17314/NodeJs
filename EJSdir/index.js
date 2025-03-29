@@ -23,8 +23,9 @@ app.get("/rolldice", (req, res) => {
 
 // Pass username to Instagram tampelet
 app.get("/ig/:username", (req, res) => {
+  let followers = ["Ali", "Adnan", "wazir", "naqi"];
   let { username } = req.params;
-  res.render("instagram.ejs", { username });
+  res.render("instagram.ejs", { username, followers });
 });
 
 // Send function sends a general response

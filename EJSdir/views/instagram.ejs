@@ -9,5 +9,13 @@
     <h1>This page belongs to @<%= username %></h1>
     <button>Follow</button>
     <button>Message</button>
+
+    <!-- Use of Lopps in EJS -->
+    <h3>You are following by</h3>
+    <ul>
+      <% for(let name of followers){ %>
+      <li><%= name %></li>
+      <% } %>
+    </ul>
   </body>
 </html>
