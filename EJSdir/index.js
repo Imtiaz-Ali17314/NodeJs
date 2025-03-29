@@ -21,6 +21,12 @@ app.get("/rolldice", (req, res) => {
   res.render("rolldice.ejs", { diceVal });
 });
 
+// Pass username to Instagram tampelet
+app.get("/ig/:username", (req, res) => {
+  let { username } = req.params;
+  res.render("instagram.ejs", { username });
+});
+
 // Send function sends a general response
 app.get("/hello", (req, res) => {
   res.send("hello");
