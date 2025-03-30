@@ -6,8 +6,8 @@
     <title>Instagarm Profile</title>
     <style>
       img {
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
       }
     </style>
   </head>
@@ -24,8 +24,8 @@
     <hr />
     <!-- Use server side data on instagram page -->
     <% for(post of data.posts){ %>
-    <img src="<%= post.image %>" alt="Some image" />
+    <img src="<%= post.image %> " alt="Some image" /><br />
     Likes: <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comments: <%=
-    post.comments %> <% } %>
+    post.comments %> <br /><br /><br /><% } %>
   </body>
 </html>
