@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roll Dice</title>
-  </head>
+<%- include("includes/header.ejs") %>
   <body>
     <h1>Dice gave value <%= diceVal %></h1>
 
     <!-- Use of Conditional Statements in ejs -->
     <% if(diceVal == 6){ %>
-    <h2>Nice! roll agani</h2>
+    <h2>Nice! roll again</h2>
     <% } %>
   </body>
 </html>
