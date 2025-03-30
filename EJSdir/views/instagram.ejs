@@ -4,18 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagarm Profile</title>
+    <style>
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    </style>
   </head>
   <body>
-    <h1>This page belongs to @<%= username %></h1>
+    <h1>This page belongs to @<%= data.name %></h1>
     <button>Follow</button>
     <button>Message</button>
 
-    <!-- Use of Lopps in EJS -->
-    <h3>You are following by</h3>
-    <ul>
-      <% for(let name of followers){ %>
-      <li><%= name %></li>
-      <% } %>
-    </ul>
+    <h3>
+      Followers: <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Following:
+      <%= data.following %>
+    </h3>
+
+    <hr />
+    <!-- Use server side data on instagram page -->
+    <% for(post of data.posts){ %>
+    <img src="<%= post.image %>" alt="Some image" />
+    Likes: <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comments: <%=
+    post.comments %> <% } %>
   </body>
 </html>
