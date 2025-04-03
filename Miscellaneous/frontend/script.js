@@ -1,16 +1,18 @@
-arr = [1, 2, 3, 4, 5];
+// Factory Function
 
-arr.push(6, 7, 9);
+function PersonMaker(name, age) {
+  person = {
+    name: name,
+    age: age,
+    talk() {
+      console.log(`Hello! I am ${this.name}`);
+    },
+  };
 
-arr.sayhello = () => {
-  console.log("Hi! I am array");
-};
+  return person;
+}
 
-arr2 = [12, 34, 5, 7, 98];
-
-arr2.sayhello = () => {
-  console.log("Hi! I am array");
-};
-
-console.log("arr prototype: ", arr.__proto__);
-console.log("Array prototype: ", Array.prototype);
+p1 = PersonMaker("ALi", 23);
+p2 = PersonMaker("kamal", 12);
+p3 = PersonMaker("hassan", 34);
+p4 = PersonMaker("akbar", 63);
