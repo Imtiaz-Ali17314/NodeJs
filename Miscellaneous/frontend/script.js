@@ -1,18 +1,15 @@
-// Factory Function
+// New operator
 
-function PersonMaker(name, age) {
-  person = {
-    name: name,
-    age: age,
-    talk() {
-      console.log(`Hello! I am ${this.name}`);
-    },
-  };
+// Constructor ---> Doesn't retrun anything and start with Capital
 
-  return person;
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
 }
 
-p1 = PersonMaker("ALi", 23);
-p2 = PersonMaker("kamal", 12);
-p3 = PersonMaker("hassan", 34);
-p4 = PersonMaker("akbar", 63);
+Person.prototype.talk = function () {
+  console.log(`Hi! I am ${this.name}`);
+};
+
+let p1 = new Person("Ali", 12);
+let p2 = new Person("hSSAN", 34);
