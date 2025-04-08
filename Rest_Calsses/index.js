@@ -13,14 +13,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let posts = [
   {
+    id: "1a",
     username: "Imtiaz",
     content: "I love coding",
   },
   {
+    id: "2b",
     username: "Kazim",
     content: "Hard working is necessary for success",
   },
   {
+    id: "3c",
     username: "Rafeeq",
     content: "I got selected for my 1st internship",
   },
@@ -38,6 +41,13 @@ app.post("/posts", (req, res) => {
   let { username, content } = req.body;
   posts.push({ username, content });
   res.redirect("/posts"); // Redirect Page
+});
+
+app.get("/posts/:id", (req, res) => {
+  let { id } = req.params;
+  let post = posts.find((p) => id === p.id);
+  res.render("show.ejs", { post });
+  console.log(post);
 });
 
 app.listen(port, () => {
